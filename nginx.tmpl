@@ -280,8 +280,8 @@ server {
 	{{ end }}
 
 	ssl_prefer_server_ciphers on;
-	ssl_session_timeout 5m;
-	ssl_session_cache shared:SSL:50m;
+	ssl_session_timeout 180m;
+	ssl_session_cache shared:SSL:20m;
 	ssl_session_tickets off;
 
 	ssl_certificate /etc/nginx/certs/{{ (printf "%s.crt" $cert) }};
