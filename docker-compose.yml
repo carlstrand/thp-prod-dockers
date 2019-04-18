@@ -1,11 +1,6 @@
 version: '3'
 services:
-  site-thp-produktion:
-    image: kallestrand/web:latest
-    ports:
-      - "80:80"
-
-nginx-web:
+  nginx-web:
     image: nginx
     labels:
         com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy: "true"
