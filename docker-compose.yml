@@ -1,5 +1,14 @@
 version: '3'
 services:
+  site-thp-produktion:
+    image: kallestrand/web:latest
+    ports:
+      - "80:80"
+    environment:
+      - VIRTUAL_HOST=www.yourdomain.com
+      - LETSENCRYPT_HOST=www.yourdomain.com
+      - LETSENCRYPT_EMAIL=your@email.com
+
   nginx-web:
     image: nginx
     labels:
